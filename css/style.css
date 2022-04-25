@@ -1,0 +1,172 @@
+/*************** GENERAL STYLES ***************/
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  --Card-BG: white;
+  --Subscription-BG: hsl(225, 100%, 98%);
+  --Cancel-Color: hsl(225, 100%, 94%);
+  --Title-Color: hsl(223, 47%, 23%);
+  --Paragraph-Color: hsl(224, 23%, 55%);
+  --Button-Color: hsl(245, 75%, 52%);
+  --Button-Color-Hover: hsl(250, 80%, 67%);
+  --Card-Img-Border: 1.2em;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-color: var(--Cancel-Color);
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 16px;
+  display: grid; 
+  place-items: center;
+  min-height: 100vh
+}
+
+/*************** MAIN CARD ***************/
+.card {
+  margin: 50px 25px;
+  max-width: 330px;
+  min-height: 575px;
+  background-color: var(--Card-BG);
+  border-radius: var(--Card-Img-Border);
+  box-shadow: 0 0 30px -15px rgba(0, 0, 0, 0.4);
+}
+/***** CONTAINER 1 Hero *****/
+.card__ctr-hero {
+  max-height: 162px;
+} 
+.card__ctr-hero__img {
+  width: 100%;
+}
+.card__ctr-hero__img:first-of-type {
+  border-radius: var(--Card-Img-Border) var(--Card-Img-Border) 0 0;
+}
+
+/***** CONTAINER 2 Content *****/
+.card__ctr-content {
+  margin: 30px auto;
+  width: 285px;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+/*** Description from Content ***/
+.card__ctr-content__desc {
+  margin: 0 11.2px;
+  text-align: center;
+  display: grid;
+  gap: 15px;
+}
+.card__desc-title {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--Title-Color);
+}
+.card__desc-paragraph {
+  font-family: 16px;
+  color: var(--Paragraph-Color);
+  line-height: 26px;
+}
+/*** Subscription from Content ***/
+.card__ctr-content__subs {
+  margin: 0 auto;
+  padding: 15px 12px;
+  width: 280px;
+  height: 80px;
+  background-color: var(--Subscription-BG);
+  border-radius: .7em;
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  gap: 17px;
+}
+/* Icon */
+.card__subs-icon {
+  max-width: 48px;
+  max-height: 48px;
+}
+.card__icon-music {
+  width: 100%;
+  height: 100%;
+}
+/* Type Plan */
+.card__subs-list {
+  text-align: left;
+}
+.card__type-plan {
+  color: var(--Title-Color);
+}
+.card__date-plan {
+  font-weight: 500;
+  color: var(--Paragraph-Color);
+  list-style: none;
+}
+/* Change Plan */
+.card__subs-change-plan {
+  width: 80px;
+  text-align: end;
+}
+.card__change {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--Button-Color);
+  align-items: center;
+}
+/*** Button from Content ***/
+.card__ctr-content__btn {
+  padding: 16px 63px;
+  background-color: var(--Button-Color);
+  text-align: center;
+  border-radius: .9em;
+  box-shadow: 0 10px 40px -15px var(--Button-Color);
+  cursor: pointer;
+}
+.card__btn {
+  font-weight: 600;
+  color: var(--Card-BG);
+  text-decoration: none;
+}
+/*** Cancel from Content ***/
+.card__cancel {
+  font-weight: 700;
+  color: var(--Paragraph-Color);
+  text-decoration: none;
+  text-align: center;
+}
+
+/*************** FOOTER ***************/
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+/*************** HOVER ***************/
+.card__change:hover {
+  color: var(--Button-Color-Hover);
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+.card__ctr-content__btn:hover {
+  background-color: var(--Button-Color-Hover);
+  box-shadow: 0 10px 40px -10px var(--Button-Color);
+  transition: all .3s ease-in-out;
+}
+.card__cancel:hover {
+  color: var(--Title-Color);
+  transition: all .3s ease-in-out;
+}

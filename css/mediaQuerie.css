@@ -1,0 +1,43 @@
+@media screen and (min-width: 800px) {
+
+  body {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-position: initial;
+    background-size: initial;
+  }
+
+  
+  .card {
+    margin: 40px 25px;
+    max-width: 400px;
+    min-height: 620px;
+    box-shadow: 0 20px 30px -20px rgba(0, 0, 0, 0.4);
+  }
+
+  /***** CONTAINER 1 Hero *****/
+  .card__ctr-hero {
+    max-height: 195px;
+  } 
+
+  /***** CONTAINER 2 Content *****/
+  .card__ctr-content {
+    width: 320px;
+    height: 390px;
+    display: flex;
+    justify-content: center;
+  }
+  /*** Subscription from Content ***/
+  .card__ctr-content__subs {
+    margin: 0;
+    width: 335px;
+  }
+  /* Change Plan */
+  .card__subs-change-plan {
+    width: 120px;
+    text-align: end;
+  }
+  /*** Button from Content ***/
+  .card__ctr-content__btn {
+    width: 335px;
+  }
+}
